@@ -1,7 +1,7 @@
 Feature: Hr my trials
 
 Background:
-  * def hrurl2 = 'http://34.228.41.120:1000/ords/hr'
+  * def hrurl2 = 'http://3.87.65.105:1000/ords/hr'
 
     Scenario: Get a country name and verify
       Given url hrurl2
