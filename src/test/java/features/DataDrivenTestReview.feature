@@ -1,5 +1,6 @@
 Feature: Data driven review
 
+  @Review
   Scenario Outline: Search Spartan
     Given url 'http://3.87.65.105:8000/api/spartans/'
     And path 'search'

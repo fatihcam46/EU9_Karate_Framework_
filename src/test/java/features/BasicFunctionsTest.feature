@@ -1,3 +1,5 @@
+
+
 Feature: Basic functions
 
   Scenario: methods
@@ -7,7 +9,7 @@ Feature: Basic functions
     Given print 9+6
     * print 'This is Eu9 ','Karate Review'
 
-
+  @Review
   Scenario: Define variables
     * def a = 7
     * print a

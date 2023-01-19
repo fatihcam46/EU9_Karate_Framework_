@@ -23,6 +23,7 @@ Feature: api test review
     And print response
 
 
+  @Review
   Scenario: query parameter
     Given path '/search'
     And param nameContains = 'va'
