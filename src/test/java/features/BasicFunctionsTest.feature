@@ -82,4 +82,30 @@ Feature: Basic functions
       * match spartan.name == '#present'
       * match spartan.phone == '#number'
 
+      Scenario: Contains method
+        * def spartan =
+    """
+    {
+    "content": [
+        {
+            "id": 25,
+            "name": "Valentin",
+            "gender": "Male",
+            "phone": 1536037088
+        },
+        {
+            "id": 944,
+            "name": "Vallie",
+            "gender": "Male",
+            "phone": 9516284951
+        }
+    ],
+    "totalElement": 2
+}
+    """
+        * print spartan.content.length
+        * match spartan.content contains {'id':944, 'name':'Vallie','gender':'Male','phone':9516284951}
+        * def list = {list: [10,20,30]}
+        * match list.list contains any [10,30,50,70]
+
 
