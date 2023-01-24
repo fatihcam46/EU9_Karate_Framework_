@@ -1,5 +1,5 @@
 Feature:  Parameters examples
-
+#4th
   Background:
     * def baseUrl = 'https://petstore.swagger.io/v2/store'
     * def spartanUrl = 'http://3.87.65.105:8000/'
@@ -26,7 +26,7 @@ Feature:  Parameters examples
     Then status 200
     And print response
     And match response == {  "id": 9,  "name": "Florrie",  "gender": "Female",  "phone": 1702025787  }
-
+#9th spartan matching
   Scenario: get ones spartan only
     * def expectedSpartan =
   """
@@ -59,6 +59,7 @@ Feature:  Parameters examples
     And match each response.content contains {"gender":"Female"}
       #second way of iteration
     And match each response.content[*].gender == 'Female'
+     #* star means i >>loop means each>>
     And match response.content[0].name == 'Jaimie'
       #verify each content phone is number
     And match each response.content[*].phone == '#number'

@@ -1,6 +1,7 @@
 @smoke
 Feature: Bookit Api tests
-
+#7th feature   from  BookItAuth.feature
+  #assume that access token have, and take
     Background:
       * def baseUrl = 'https://cybertek-reservation-api-qa3.herokuapp.com/'
       #point another feature file
@@ -31,6 +32,7 @@ Feature: Bookit Api tests
         When method GET
         Then status 200
         And print response
+    #under data file>>>> campuses.json
         # read the campuses.json file in the data directory
         And def expectedCampuses = read('classpath:data/campuses.json')
         And match response == expectedCampuses

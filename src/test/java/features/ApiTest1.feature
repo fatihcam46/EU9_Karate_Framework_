@@ -1,10 +1,10 @@
 Feature: pet store api tests
-
+#3rd feature
   Scenario: basic test with status code validation
     Given url 'https://petstore.swagger.io/v2/store/inventory'
     When method GET
     Then status 200
-
+#status code must be 200
   Scenario: header verification
     Given url 'https://petstore.swagger.io/v2/store/inventory'
     When method get
@@ -14,8 +14,9 @@ Feature: pet store api tests
     #to verify headers we use header keyword then headername without double or single code
     # and == 'header value'
     And match header Date == '#present'
+    #header var mi yok mu?
     #this equals to headers().hasHeaderWithName("headername") in restassured
-
+# buna gerek yok> restassured ta yapiliyordu
 
 
 
@@ -29,7 +30,7 @@ Feature: pet store api tests
     #verify base is EUR
     And match response.Available == 13
     And match response.roma == '#present'
-
+#response after available  after ...
 
 
 

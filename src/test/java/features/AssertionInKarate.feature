@@ -1,5 +1,5 @@
 Feature: using match keyword
-
+#2nd feature
   Scenario: some matching example
     * def name = 'Severus Snape'
     * match name == 'Severus Snape'
@@ -15,9 +15,11 @@ Feature: using match keyword
       "active":true
     }
     """
+    #dont forget key and between value >>> write comma "TJ",
     * def emp_name = employee.first_name
     * match emp_name == 'TJ'
     * match employee.salary == 24001
+    # first is correct  # second matching is incorrect
   Scenario: fuzzy matching
     * def employee =
   """
@@ -31,7 +33,8 @@ Feature: using match keyword
     * match employee.salary == '#number'
     * match employee.active == '#boolean'
     * match employee.last_name == '#notpresent'
-
+# salary we have or not?
+#present or notpresent  olmasi olmamasi
 
 
   Scenario: contains matching
@@ -51,6 +54,7 @@ Feature: using match keyword
     ]
     """
     * def length = employees.length
+     # how many JSON object are: length
     * print length
     * match  length == 2
     * match employees contains {"first_name":"TJ","salary":24001,"active":true }

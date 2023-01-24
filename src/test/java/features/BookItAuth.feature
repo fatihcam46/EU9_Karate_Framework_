@@ -11,3 +11,8 @@ Feature: get user token
       And print response.accessToken
       And def token = response.accessToken
       And def name = 'steven'
+
+    #6th feature
+  #looks like POSTMAN request to response
+  #from
+  #request ..response and take accesstoken

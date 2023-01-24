@@ -1,5 +1,5 @@
 Feature: welcome to karate
-
+#1st
   Scenario: how to print
     Given print "Hello World"
     When print 'another print'
@@ -8,8 +8,9 @@ Feature: welcome to karate
   Scenario: more printing
     Given print 'some words to print'
      * print 'my name is','karate kid'
-    # , --> concat two strings +1 white space
-     * print 2+2
+      # , --> concat two strings +1 white space       #  * means when then and  any command
+    * print 2+2
+#  def means: define   + directly concat,   , comma making space
 
   Scenario: variables
     * def name = 'Mike'
@@ -22,7 +23,7 @@ Feature: welcome to karate
     * print student
     * print student.name
     * print student.owes_tuition
-
+#""" three double code up-down between write
   Scenario: json object 2
     * def student =
     """
@@ -35,7 +36,7 @@ Feature: welcome to karate
     * print student.salary
     * print student.firstName
     * print student.lastName
-
+# from POSTMAN take a spartan: JSON format
   Scenario: Spartan Variable
     * def spartan =
   """
@@ -70,5 +71,5 @@ Feature: welcome to karate
     * print students[0].name
     * print students[1].owes_tuition
 
-
+#students[0] first student
 

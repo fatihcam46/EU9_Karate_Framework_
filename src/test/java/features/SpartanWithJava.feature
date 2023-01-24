@@ -1,6 +1,6 @@
 @smoke
 Feature: Karate Java Integration
-
+#4th
   Background:
     * def spartanUrl = 'http://3.87.65.105:8000/'
   Scenario: Get a spartan with request header
@@ -30,7 +30,7 @@ Feature: Karate Java Integration
 
 
   Scenario: reading java methods
-     #point the class that we want to run
+     #point the class that we want to run SDG:SpartanDataGenerator
      #Java.type --> used to connect to java class
     * def SDG = Java.type('utilities.SpartanDataGenerator')
     * def newSpartan = SDG.createSpartan()
@@ -55,7 +55,7 @@ Feature: Karate Java Integration
     And match response.data.name == newSpartan.name
 
 
-
+#create randomly and delete spartan
   Scenario: Create a spartan with Random Data (JAVA) and delete
     * def SDG = Java.type('utilities.SpartanDataGenerator')
     * def newSpartan = SDG.createSpartan()
@@ -73,6 +73,8 @@ Feature: Karate Java Integration
     And def idToDelete = response.data.id
     Given url spartanUrl
     And path 'api/spartans',idToDelete
+     # And path idToDelete ayri ayri da yazilabilir
     When method DELETE
     Then status 204
+     #successfully delete 204 status code: without no content
 
